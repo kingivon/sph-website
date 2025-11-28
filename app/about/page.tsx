@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Sapiential Publishing House",
+  description: "Learn about Sapiential Publishing House, our mission to equip authors to share wisdom that transforms lives, and our commitment to excellence in Christian book publishing.",
+};
 
 export default function AboutPage() {
   const values = [

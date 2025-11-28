@@ -11,11 +11,11 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/books", label: "Our Books" },
     { href: "/services", label: "Publishing Services" },
-    { href: "/course-development", label: "Course Development", isFeatured: true },
     { href: "/authors", label: "For Authors" },
     { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
+    { href: "/course-development", label: "Course Development" },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Navigation() {
       <div className="section-container">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/logos/Orange.png"
               alt="Sapiential Publishing House"
@@ -32,6 +32,7 @@ export default function Navigation() {
               className="h-12 w-auto"
               priority
             />
+            <span className="text-xl font-bold text-charcoal">Sapiential Publishing</span>
           </Link>
 
           {/* Desktop Navigation */}

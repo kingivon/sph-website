@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resources - Sapiential Publishing House",
+  description: "Free guides, templates, and insights for Christian authors. Publishing tips, manuscript formatting templates, and author resources to help you on your publishing journey.",
+};
 
 export default function ResourcesPage() {
   const downloads = [

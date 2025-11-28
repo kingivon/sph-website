@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Publishing Services - Sapiential Publishing House",
+  description: "Comprehensive Christian book publishing services including editing, cover design, formatting, Amazon KDP setup, and complete publishing packages.",
+};
 
 export default function ServicesPage() {
   const flagshipService = {

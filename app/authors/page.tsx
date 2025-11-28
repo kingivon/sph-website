@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "For Authors - Sapiential Publishing House",
+  description: "Submit your Christian manuscript for publishing. Review submission guidelines, timeline, FAQs, and learn how we help authors bring their faith-based books to life.",
+};
+
 export default function AuthorsPage() {
   const faqs = [
     {
@@ -126,8 +133,8 @@ export default function AuthorsPage() {
                 <p className="text-gray-700 mb-4">
                   <strong>Email your submission to:</strong>
                 </p>
-                <a href="mailto:sapientialpublishing@gmail.com" className="text-2xl font-bold text-primary hover:text-primary-600">
-                  sapientialpublishing@gmail.com
+                <a href="mailto:info@sapientialpublishing.com" className="text-2xl font-bold text-primary hover:text-primary-600">
+                  info@sapientialpublishing.com
                 </a>
                 <p className="text-gray-600 mt-4">
                   Please include "Manuscript Submission" in the subject line, along with your book title.
@@ -193,7 +200,7 @@ export default function AuthorsPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="mailto:sapientialpublishing@gmail.com"
+              href="mailto:info@sapientialpublishing.com"
               className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block"
             >
               Submit Your Manuscript

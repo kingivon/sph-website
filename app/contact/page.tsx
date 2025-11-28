@@ -52,8 +52,8 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:sapientialpublishing@gmail.com" className="text-primary hover:text-primary-600 font-medium">
-                      sapientialpublishing@gmail.com
+                    <a href="mailto:info@sapientialpublishing.com" className="text-primary hover:text-primary-600 font-medium">
+                      info@sapientialpublishing.com
                     </a>
                     <p className="text-sm text-gray-600 mt-1">We respond within 2 business days</p>
                   </div>

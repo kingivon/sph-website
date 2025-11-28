@@ -40,7 +40,7 @@ export const booksData: Book[] = [
     releaseDate: "January 16, 2026",
     asin: "Pre-order",
     isbn: "979-8992849066",
-    amazonUrl: "https://www.amazon.com/KNOCK-Believers-Prayer-Away-Miracle/dp/979-8992849066",
+    amazonUrl: "https://www.amazon.com/dp/B0DQ2G2ZG1",
     features: [
       "31-Day Devotional",
       "Complete Study Guide with discussion questions for all 11 chapters",
@@ -63,7 +63,7 @@ export const booksData: Book[] = [
     rating: "#1,459 in Christian Faith",
     asin: "B0FWRZMY2K",
     isbn: "979-8992849073",
-    amazonUrl: "https://www.amazon.com/WILDERNESS-SEASON-Hidden-Greatest-Breakthrough/dp/B0FWRZMY2K"
+    amazonUrl: "https://www.amazon.com/dp/B0FWRZMY2K"
   },
   {
     id: 6,
@@ -82,7 +82,7 @@ export const booksData: Book[] = [
     rating: "New Release",
     asin: "B0FTZXKSPT",
     isbn: "979-8992849059",
-    amazonUrl: "https://www.amazon.com/Unknown-What-You-Need-Know/dp/B0FTZXKSPT"
+    amazonUrl: "https://www.amazon.com/dp/B0FTZXKSPT"
   },
   {
     id: 5,

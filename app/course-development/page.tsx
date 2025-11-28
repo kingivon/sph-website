@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Course Development - Sapiential Publishing House",
+  description: "Transform your book into a revenue-generating course. Professional course development services including curriculum design, workbooks, study guides, and video content support.",
+};
 
 export default function CourseDevelopment() {
   return (

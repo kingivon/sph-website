@@ -1,11 +1,29 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { authorsData, booksData } from "@/lib/booksData";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   return authorsData.map((author) => ({
     slug: author.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const author = authorsData.find((a) => a.slug === slug);
+
+  if (!author) {
+    return {
+      title: "Author Not Found - Sapiential Publishing House",
+      description: "The requested author could not be found.",
+    };
+  }
+
+  return {
+    title: `${author.name} - Sapiential Publishing House`,
+    description: author.bio,
+  };
 }
 
 export default async function AuthorPage({ params }: { params: Promise<{ slug: string }> }) {

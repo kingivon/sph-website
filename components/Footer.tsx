@@ -59,8 +59,8 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="mailto:sapientialpublishing@gmail.com" className="hover:text-primary transition-colors">
-                  sapientialpublishing@gmail.com
+                <a href="mailto:info@sapientialpublishing.com" className="hover:text-primary transition-colors">
+                  info@sapientialpublishing.com
                 </a>
               </li>
               <li>

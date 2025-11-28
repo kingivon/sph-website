@@ -1,5 +1,11 @@
 import Link from "next/link";
 import { booksData } from "@/lib/booksData";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sapiential Publishing House - Christian Book Publishing",
+  description: "Professional Christian book publishing services that help authors share their God-given message with the world. Editing, design, Amazon publishing, and more.",
+};
 
 export default function Home() {
   // Featured books - Latest releases first (already ordered in booksData)

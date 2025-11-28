@@ -1,11 +1,29 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { booksData } from "@/lib/booksData";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   return booksData.map((book) => ({
     slug: book.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const book = booksData.find((b) => b.slug === slug);
+
+  if (!book) {
+    return {
+      title: "Book Not Found - Sapiential Publishing House",
+      description: "The requested book could not be found.",
+    };
+  }
+
+  return {
+    title: `${book.title} - Sapiential Publishing House`,
+    description: book.description,
+  };
 }
 
 export default async function BookPage({ params }: { params: Promise<{ slug: string }> }) {
