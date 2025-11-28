@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   const values = [
     {
@@ -158,15 +160,15 @@ export default function AboutPage() {
               we invite you to be part of the Sapiential Publishing House family.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="/authors" className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
+              <Link href="/authors" className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
                 For Authors
-              </a>
-              <a href="/books" className="bg-charcoal text-white hover:bg-charcoal-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
+              </Link>
+              <Link href="/books" className="bg-charcoal text-white hover:bg-charcoal-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
                 Browse Our Books
-              </a>
-              <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
+              </Link>
+              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

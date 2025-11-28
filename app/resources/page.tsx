@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ResourcesPage() {
   const downloads = [
     {
@@ -94,9 +96,9 @@ export default function ResourcesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <a href="/contact" className="btn-primary w-full text-center block">
+                <Link href="/contact" className="btn-primary w-full text-center block">
                   Request Download
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -163,12 +165,12 @@ export default function ResourcesPage() {
             Whether you have a completed manuscript or you're just getting started, we're here to help you bring your book to life.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/authors" className="btn-primary">
+            <Link href="/authors" className="btn-primary">
               Submission Guidelines
-            </a>
-            <a href="/services" className="btn-secondary">
+            </Link>
+            <Link href="/services" className="btn-secondary">
               View Our Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>

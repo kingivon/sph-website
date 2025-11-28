@@ -18,12 +18,12 @@ export default function Home() {
               Professional Christian book publishing services that help authors share their God-given message with the world.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/services" className="btn-primary">
+              <Link href="/services" className="btn-primary">
                 Explore Our Services
-              </a>
-              <a href="/books" className="btn-secondary">
+              </Link>
+              <Link href="/books" className="btn-secondary">
                 View Our Books
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -112,16 +112,16 @@ export default function Home() {
               <div key={i} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.desc}</p>
-                <a href="/services" className="text-primary hover:text-primary-600 font-semibold">
+                <Link href="/services" className="text-primary hover:text-primary-600 font-semibold">
                   Learn More &rarr;
-                </a>
+                </Link>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="/services" className="btn-primary">
+            <Link href="/services" className="btn-primary">
               View All Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -163,9 +163,9 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Let us help you share your faith-based message with the world through professional publishing services.
           </p>
-          <a href="/contact" className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
+          <Link href="/contact" className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 inline-block">
             Get Started Today
-          </a>
+          </Link>
         </div>
       </section>
     </div>
