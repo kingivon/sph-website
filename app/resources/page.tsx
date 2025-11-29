@@ -30,44 +30,39 @@ export default function ResourcesPage() {
 
   const blogPosts = [
     {
-      title: "5 Signs Your Book Idea Is Ready to Become a Manuscript",
-      excerpt: "Not every idea is ready to be a book. Learn the five key indicators that your concept has the substance, clarity, and impact needed to transform into a full manuscript.",
+      title: "5 Signs Your Manuscript Is Ready for Professional Editing",
+      excerpt: "Learn the key indicators that your manuscript is ready for professional editing, from self-editing completion to beta reader feedback and knowing when to let go.",
       category: "Writing Tips",
+      slug: "/blog/manuscript-ready-for-editing",
+      date: "November 15, 2025",
     },
     {
-      title: "Traditional vs. Self-Publishing: Which Path Is Right for Your Book?",
-      excerpt: "Understanding the pros and cons of each publishing model to make an informed decision that aligns with your goals, budget, and vision for your book.",
+      title: "Traditional vs. Self-Publishing: Which Path Is Right for You?",
+      excerpt: "Compare the pros and cons of each publishing path, discover hybrid options, and learn how to decide based on your goals, timeline, and vision.",
       category: "Publishing 101",
+      slug: "/blog/traditional-vs-self-publishing",
+      date: "November 12, 2025",
     },
     {
-      title: "How to Write a Book While Working Full-Time in Ministry",
-      excerpt: "Practical strategies for busy ministry leaders who want to write a book without sacrificing their calling or burning out in the process.",
-      category: "Author Tips",
-    },
-    {
-      title: "The Anatomy of a Book Cover That Sells",
-      excerpt: "Your cover is your first impression. Discover what makes a book cover effective, from design principles to genre expectations.",
-      category: "Design",
-    },
-    {
-      title: "Why Every Pastor Should Write a Book (And How to Start)",
-      excerpt: "Your sermons reach your congregation, but a book can reach the world. Learn why writing a book is one of the most strategic ministry decisions you can make.",
-      category: "Ministry",
-    },
-    {
-      title: "Common Mistakes First-Time Authors Make (And How to Avoid Them)",
-      excerpt: "Learn from the mistakes of others. We break down the most common pitfalls new authors face and how to navigate around them.",
-      category: "Author Tips",
-    },
-    {
-      title: "How to Turn Your Testimony Into a Transformative Book",
-      excerpt: "Your story has power, but turning personal experience into a book that transforms readers requires intentionality. Here's how to do it well.",
-      category: "Writing Tips",
-    },
-    {
-      title: "Understanding Amazon Categories and Keywords for Christian Books",
-      excerpt: "Maximize your book's discoverability on Amazon with the right categories and keywords. A strategic guide for Christian authors.",
+      title: "How to Write a Book Description That Sells",
+      excerpt: "Master the art of writing compelling book descriptions with proven techniques for hook writing, benefit-focused language, and genre expectations.",
       category: "Marketing",
+      slug: "/blog/book-description-that-sells",
+      date: "November 18, 2025",
+    },
+    {
+      title: "The True Cost of Self-Publishing: A Realistic Budget Guide",
+      excerpt: "Understand the real costs of self-publishing with a detailed breakdown of editing, cover design, formatting, marketing expenses, and where to save vs. invest.",
+      category: "Publishing 101",
+      slug: "/blog/self-publishing-budget-guide",
+      date: "November 22, 2025",
+    },
+    {
+      title: "Building Your Author Platform Before Your Book Launches",
+      excerpt: "Learn how to build a strong author platform with social media, email lists, and website strategies to ensure a successful book launch.",
+      category: "Author Tips",
+      slug: "/blog/building-author-platform",
+      date: "November 25, 2025",
     },
   ];
 
@@ -135,19 +130,23 @@ export default function ResourcesPage() {
           <h2 className="mb-12">Publishing Insights & Author Tips</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-200">
-                <div className="p-6">
-                  <div className="inline-block bg-primary-100 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4">
+              <article key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-200 flex flex-col">
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="inline-block bg-primary-100 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4 self-start">
                     {post.category}
                   </div>
                   <h3 className="text-xl font-bold mb-3 leading-tight">{post.title}</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed">{post.excerpt}</p>
-                  <button className="text-primary hover:text-primary-600 font-semibold flex items-center gap-2">
-                    Read More
+                  <p className="text-gray-700 mb-4 leading-relaxed flex-1">{post.excerpt}</p>
+                  <div className="text-xs text-gray-500 mb-4">{post.date}</div>
+                  <Link
+                    href={post.slug}
+                    className="text-primary hover:text-primary-600 font-semibold flex items-center gap-2 mt-auto"
+                  >
+                    Read Full Article
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}
