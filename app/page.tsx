@@ -141,22 +141,19 @@ export default function Home() {
               <p className="text-gray-700 mb-6 italic leading-relaxed">
                 "I had a message burning in my heart for years but didn't know how to get it into the world. Sapiential Publishing House guided me through every step with patience and professionalism. They treated my manuscript like it mattered because to them, it did. My book is now reaching people I never could have reached on my own."
               </p>
-              <div className="font-semibold text-charcoal">Pastor Michael Thompson</div>
-              <div className="text-gray-600 text-sm">Author of Grace for the Broken Road</div>
+              <div className="text-gray-600 text-sm">— First-time Author, Texas</div>
             </div>
             <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-primary">
               <p className="text-gray-700 mb-6 italic leading-relaxed">
                 "As a first-time author, I was overwhelmed by the publishing process. SPH made it simple. Their developmental editing transformed my rough draft into something I'm truly proud of, and the cover design exceeded my expectations. I felt supported and informed every step of the way."
               </p>
-              <div className="font-semibold text-charcoal">Denise Carter</div>
-              <div className="text-gray-600 text-sm">Author of Finding My Voice Again</div>
+              <div className="text-gray-600 text-sm">— Christian Fiction Writer</div>
             </div>
             <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-primary">
               <p className="text-gray-700 mb-6 italic leading-relaxed">
                 "What sets Sapiential apart is that they understand ministry. They didn't just edit my book—they helped me sharpen my message for maximum kingdom impact. The team genuinely cares about the authors they work with and the readers who will be touched by these books."
               </p>
-              <div className="font-semibold text-charcoal">Rev. Angela Brooks</div>
-              <div className="text-gray-600 text-sm">Author of Leading from the Wilderness</div>
+              <div className="text-gray-600 text-sm">— Pastor & Author, Florida</div>
             </div>
           </div>
         </div>
