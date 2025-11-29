@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,41 +21,49 @@ export default function ServicesPage() {
       title: "Manuscript Evaluation",
       description: "Receive a comprehensive assessment of your manuscript's strengths, areas for improvement, and market potential. Our evaluation covers structure, pacing, theological accuracy, target audience alignment, and publishing readiness. You'll receive a detailed written report with actionable recommendations to strengthen your work before moving forward.",
       turnaround: "2 to 3 weeks",
+      icon: "/images/Manuscript Evaluation.png",
     },
     {
       title: "Developmental Editing",
       description: "Transform your manuscript from good to great with our developmental editing service. We work with you on the big picture elements: story structure, chapter organization, argument flow, theological depth, and reader engagement. This collaborative process ensures your message comes through with clarity and power.",
       turnaround: "4 to 6 weeks",
+      icon: "/images/Developmental Editing.png",
     },
     {
       title: "Copyediting & Proofreading",
       description: "Polish your manuscript to professional standards with our copyediting and proofreading service. We correct grammar, punctuation, spelling, and syntax while ensuring consistency in style, tone, and formatting. Your readers will experience a seamless, error-free read that reflects the quality of your message.",
       turnaround: "2 to 4 weeks",
+      icon: "/images/Copyediting & Proofreading.png",
     },
     {
       title: "Professional Cover Design",
       description: "Your book cover is your first impression. Our design team creates eye-catching, genre-appropriate covers that capture your book's essence and appeal to your target readers. Each design package includes multiple concepts, revisions, and final files optimized for both print and digital formats.",
       turnaround: "2 to 3 weeks",
+      icon: "/images/Cover Design.png",
     },
     {
       title: "Interior Layout & Formatting",
       description: "Give your readers a beautiful reading experience with professional interior formatting. We handle typography, chapter headers, page layout, margins, and all the details that make a book feel polished and professional. Delivered in print-ready PDF and eBook formats (ePub and Kindle).",
       turnaround: "1 to 2 weeks",
+      icon: "/images/Interior Formatting.png",
     },
     {
       title: "Amazon KDP Publishing Setup",
       description: "Navigate the publishing process with confidence. We handle your complete Amazon KDP setup including account configuration, book details optimization, category and keyword selection for maximum discoverability, pricing strategy, and successful file uploads. Launch your book the right way from day one.",
       turnaround: "3 to 5 business days",
+      icon: "/images/Amazon KDP Setup.png",
     },
     {
       title: "ISBN & Copyright Registration",
       description: "Protect your work and establish your professional publishing presence. We assist with ISBN acquisition, copyright registration guidance, and Library of Congress registration. Your book will have all the proper identifiers needed for distribution and legal protection.",
       turnaround: "1 to 2 weeks",
+      icon: "/images/ISBN & Copyright Registration.png",
     },
     {
       title: "Complete Publishing Package",
       description: "Our all-inclusive package takes your manuscript from final draft to published book. Includes developmental editing, copyediting, proofreading, cover design, interior formatting, ISBN registration, Amazon KDP setup, and launch consultation. The comprehensive solution for authors who want expert guidance every step of the way.",
       turnaround: "8 to 12 weeks",
+      icon: "/images/Complete Publishing Package.png",
     },
   ];
 
@@ -118,6 +127,17 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white border rounded-lg p-8 hover:shadow-xl transition-shadow">
+                {service.icon && (
+                  <div className="mb-6 flex justify-center">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      width={80}
+                      height={80}
+                      className="object-contain"
+                    />
+                  </div>
+                )}
                 <h3 className="text-2xl mb-4">{service.title}</h3>
                 <p className="text-gray-700 mb-6">{service.description}</p>
 

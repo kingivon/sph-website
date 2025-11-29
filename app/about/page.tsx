@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -78,18 +79,29 @@ export default function AboutPage() {
       {/* Our Story */}
       <section className="py-16 bg-gray-50">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="mb-8 text-center">Our Story</h2>
-            <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm">
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Sapiential Publishing House was born from a simple conviction: <strong>every God-given message deserves to be heard.</strong> The name "Sapiential" comes from the Latin word for wisdom, reflecting our commitment to publishing books that carry transformative truth and practical insight for everyday life.
-              </p>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Founded by Dr. Ivon Valerie, an author of multiple books on faith, trauma healing, and spiritual growth, SPH understands the author's journey firsthand. We know what it's like to carry a message that burns in your heart, to wrestle with getting it onto the page, and to navigate the complex world of publishing. That experience shapes everything we do.
-              </p>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                Today, SPH serves authors across the Caribbean, North America, and beyond, helping them bring their manuscripts to life with excellence and integrity. Whether you're a first-time author with a testimony to share or an experienced writer expanding your catalog, we're here to walk alongside you from concept to completion.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm">
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  Sapiential Publishing House was born from a simple conviction: <strong>every God-given message deserves to be heard.</strong> The name "Sapiential" comes from the Latin word for wisdom, reflecting our commitment to publishing books that carry transformative truth and practical insight for everyday life.
+                </p>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  Founded by Dr. Ivon Valerie, an author of multiple books on faith, trauma healing, and spiritual growth, SPH understands the author's journey firsthand. We know what it's like to carry a message that burns in your heart, to wrestle with getting it onto the page, and to navigate the complex world of publishing. That experience shapes everything we do.
+                </p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Today, SPH serves authors across the Caribbean, North America, and beyond, helping them bring their manuscripts to life with excellence and integrity. Whether you're a first-time author with a testimony to share or an experienced writer expanding your catalog, we're here to walk alongside you from concept to completion.
+                </p>
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/images/ABOUT PAGE IMAGE.png"
+                  alt="Sapiential Publishing House"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-full"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -136,8 +148,14 @@ export default function AboutPage() {
             <div className="bg-white rounded-lg p-8 md:p-12 shadow-md">
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-48 h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center">
-                    <span className="text-6xl">👤</span>
+                  <div className="w-48 h-48 rounded-full overflow-hidden">
+                    <Image
+                      src="/images/ivon-valerie.png"
+                      alt="Apostle Dr. Ivon L. Valerie"
+                      width={192}
+                      height={192}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                 </div>
                 <div className="flex-1">

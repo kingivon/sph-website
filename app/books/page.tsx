@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { booksData, authorsData } from "@/lib/booksData";
 
 export default function BooksPage() {
@@ -73,16 +74,26 @@ export default function BooksPage() {
               <div key={book.id} className="border rounded-lg overflow-hidden hover:shadow-xl transition-shadow bg-white flex flex-col">
                 <div className="bg-gradient-to-br from-primary-100 to-primary-50 h-96 flex items-center justify-center p-8 relative">
                   {book.status && (
-                    <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                       {book.status}
                     </div>
                   )}
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">📖</div>
-                    <div className="text-sm text-primary-700 font-semibold">
-                      {book.series || book.category}
+                  {book.coverImage ? (
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      width={250}
+                      height={375}
+                      className="object-contain h-full w-auto"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">📖</div>
+                      <div className="text-sm text-primary-700 font-semibold">
+                        {book.series || book.category}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   {book.series && (

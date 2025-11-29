@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Sapiential Publishing House - Christian Book Publishing",
   description: "Professional Christian book publishing services. We help authors bring their faith-based stories to life.",
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
   },
 };
 

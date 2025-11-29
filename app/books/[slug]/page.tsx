@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { booksData } from "@/lib/booksData";
 import type { Metadata } from "next";
 
@@ -60,16 +61,26 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
               <div className="sticky top-24">
                 <div className="bg-gradient-to-br from-primary-100 to-primary-50 aspect-[2/3] rounded-lg flex items-center justify-center p-12 shadow-xl relative">
                   {book.status && (
-                    <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-bold z-10">
                       {book.status}
                     </div>
                   )}
-                  <div className="text-center">
-                    <div className="text-8xl mb-6">📖</div>
-                    <div className="text-sm text-primary-700 font-semibold">
-                      {book.series || book.category}
+                  {book.coverImage ? (
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      width={400}
+                      height={600}
+                      className="object-contain h-full w-auto rounded-lg"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="text-8xl mb-6">📖</div>
+                      <div className="text-sm text-primary-700 font-semibold">
+                        {book.series || book.category}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* Purchase Buttons */}
@@ -219,12 +230,22 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                   className="border rounded-lg overflow-hidden hover:shadow-xl transition-shadow bg-white group"
                 >
                   <div className="bg-gradient-to-br from-primary-100 to-primary-50 h-80 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">📖</div>
-                      <div className="text-sm text-primary-700 font-semibold">
-                        {relatedBook.series || relatedBook.category}
+                    {relatedBook.coverImage ? (
+                      <Image
+                        src={relatedBook.coverImage}
+                        alt={relatedBook.title}
+                        width={200}
+                        height={300}
+                        className="object-contain h-full w-auto"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <div className="text-6xl mb-4">📖</div>
+                        <div className="text-sm text-primary-700 font-semibold">
+                          {relatedBook.series || relatedBook.category}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">

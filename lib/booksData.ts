@@ -21,6 +21,7 @@ export interface Book {
   status?: string;
   releaseDate?: string;
   features?: string[];
+  coverImage?: string;
 }
 
 export const booksData: Book[] = [
@@ -41,6 +42,7 @@ export const booksData: Book[] = [
     asin: "Pre-order",
     isbn: "979-8992849066",
     amazonUrl: "https://a.co/d/2m87zLQ",
+    coverImage: "/images/books/the-knock.png",
     features: [
       "31-Day Devotional",
       "Complete Study Guide with discussion questions for all 11 chapters",
@@ -63,7 +65,8 @@ export const booksData: Book[] = [
     rating: "#1,459 in Christian Faith",
     asin: "B0FWRZMY2K",
     isbn: "979-8992849073",
-    amazonUrl: "https://a.co/d/60f8DW7"
+    amazonUrl: "https://a.co/d/60f8DW7",
+    coverImage: "/images/books/the-wilderness-season.png"
   },
   {
     id: 6,
@@ -82,7 +85,8 @@ export const booksData: Book[] = [
     rating: "New Release",
     asin: "B0FTZXKSPT",
     isbn: "979-8992849059",
-    amazonUrl: "https://a.co/d/9FEstCW"
+    amazonUrl: "https://a.co/d/9FEstCW",
+    coverImage: "/images/books/the-unknown.png"
   },
   {
     id: 5,
@@ -99,7 +103,8 @@ export const booksData: Book[] = [
     description: "The final book of the transformative Trauma Detox Series, guiding you to a life of abundance, joy, and flourishing. Bloom challenges you to embrace your identity, rediscover your purpose, and create a life marked by growth. This book isn't just about surviving: it's about flourishing.",
     fullDescription: "The final book of the transformative Trauma Detox Series, guiding you to a life of abundance, joy, and flourishing.\n\nBloom challenges you to embrace your identity, rediscover your purpose, and create a life marked by growth. This book isn't just about surviving: it's about flourishing.\n\nAfter you've named your scars and mended what was broken, it's time to bloom—to step into the vibrant, purposeful life God always intended for you.",
     asin: "B0DXDKPKXC",
-    amazonUrl: "https://www.amazon.com/dp/B0DXDKPKXC"
+    amazonUrl: "https://www.amazon.com/dp/B0DXDKPKXC",
+    coverImage: "/images/books/bloom.png"
   },
   {
     id: 4,
@@ -116,7 +121,8 @@ export const booksData: Book[] = [
     description: "Healing is not just about moving forward: it's about restoring what was lost and rebuilding what was broken. Mended is your guide to navigating the path of restoration with courage and faith, helping you repair broken relationships, rebuild self-worth, and rediscover joy after trauma.",
     fullDescription: "Healing is not just about moving forward: it's about restoring what was lost and rebuilding what was broken.\n\nMended is your guide to navigating the path of restoration with courage and faith, helping you repair broken relationships, rebuild self-worth, and rediscover joy after trauma.\n\nThis is the steady, intentional work of putting the pieces back together—not as they were, but better, stronger, and anchored in God's grace.",
     asin: "B0DXDDHCG8",
-    amazonUrl: "https://www.amazon.com/dp/B0DXDDHCG8"
+    amazonUrl: "https://www.amazon.com/dp/B0DXDDHCG8",
+    coverImage: "/images/books/mended.png"
   },
   {
     id: 3,
@@ -133,7 +139,8 @@ export const booksData: Book[] = [
     description: "Life leaves scars. Some are visible, while others lie hidden deep within the heart. Scarred is the first book in the Trauma Detox Series, providing empathetic guidance and biblical truth to help you name the pain and begin the healing journey.",
     fullDescription: "Life leaves scars. Some are visible, while others lie hidden deep within the heart.\n\nScarred is the first book in the Trauma Detox Series, providing empathetic guidance and biblical truth to help you name the pain and begin the healing journey.\n\nThis book meets you where you are—in the aftermath of what broke you—and gently leads you toward the hope of healing. Your scars are not the end of your story. They are proof that you survived.",
     asin: "B0DXFQ6NDC",
-    amazonUrl: "https://www.amazon.com/dp/B0DXFQ6NDC"
+    amazonUrl: "https://www.amazon.com/dp/B0DXFQ6NDC",
+    coverImage: "/images/books/scarred.png"
   },
   {
     id: 2,
@@ -151,7 +158,8 @@ export const booksData: Book[] = [
     rating: "5.0 out of 5 stars",
     asin: "B0DW1LWRKY",
     isbn: "978-0997465563",
-    amazonUrl: "https://www.amazon.com/dp/B0DW1LWRKY"
+    amazonUrl: "https://www.amazon.com/dp/B0DW1LWRKY",
+    coverImage: "/images/books/the-meaningful-life.png"
   },
   {
     id: 1,
@@ -170,7 +178,8 @@ export const booksData: Book[] = [
     rating: "5.0 out of 5 stars",
     asin: "B0BV76NV8J",
     isbn: "978-0997465532",
-    amazonUrl: "https://www.amazon.com/dp/B0BV76NV8J"
+    amazonUrl: "https://www.amazon.com/dp/B0BV76NV8J",
+    coverImage: "/images/books/prayer-lifestyle.png"
   }
 ];
 
@@ -181,6 +190,7 @@ export interface Author {
   bio: string;
   fullBio: string;
   booksCount: number;
+  photo?: string;
   website?: string;
   socials?: {
     facebook?: string;
@@ -197,6 +207,7 @@ export const authorsData: Author[] = [
     bio: "Apostle Dr. Ivon Valerie is a pastor, author, certified coach, and mental health advocate with over 20 years of experience in ministry and leadership. As the senior pastor of Faith & Works Ministries, he empowers individuals through faith, trauma healing, and personal development.",
     fullBio: "Apostle Dr. Ivon Valerie is a pastor, author, certified coach, and mental health advocate with over 20 years of experience in ministry and leadership. As the senior pastor of Faith & Works Ministries, he empowers individuals through faith, trauma healing, and personal development.\n\nWith certifications in education, counseling, psychology, and leadership and as a Certified Mental Health Christian Coach, Dr. Valerie inspires transformation through his writing, speaking, and mentorship. He helps others rebuild, thrive, and fulfill their God-given potential.\n\nHe resides in Sint Maarten with his wife, Jeanetta Valerie, and their two children.",
     booksCount: 7,
+    photo: "/images/ivon-valerie.png",
     website: "https://ivonvalerie.com",
     socials: {
       facebook: "https://www.facebook.com/kingivon",
@@ -211,5 +222,6 @@ export const authorsData: Author[] = [
     bio: "Marcus J. Raymond is an author and speaker whose writing emerges from seasons of profound personal transformation. His work explores the intersection of faith, suffering, and breakthrough, offering raw testimony and biblical insight for those navigating life's most difficult seasons.",
     fullBio: "Marcus J. Raymond is an author and speaker whose writing emerges from seasons of profound personal transformation. His work explores the intersection of faith, suffering, and breakthrough, offering raw testimony and biblical insight for those navigating life's most difficult seasons.\n\nMarcus writes for the weary believer who refuses to give up, drawing from his own journey through loss, waiting, and eventual restoration. He is committed to helping others discover that their wilderness has purpose and their breakthrough is closer than it appears.",
     booksCount: 1,
+    photo: "/images/marcus-raymond.png",
   }
 ];

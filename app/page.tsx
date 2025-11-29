@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { booksData } from "@/lib/booksData";
 import type { Metadata } from "next";
 
@@ -14,20 +15,24 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-50 to-white py-20">
-        <div className="section-container">
+      <section
+        className="relative py-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/hero-background.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/70"></div>
+        <div className="section-container relative z-10">
           <div className="max-w-4xl">
-            <h1 className="mb-6">
+            <h1 className="mb-6 text-white">
               Bringing Your Faith-Based Stories to Life
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-xl text-white mb-8">
               Professional Christian book publishing services that help authors share their God-given message with the world.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/services" className="btn-primary">
                 Explore Our Services
               </Link>
-              <Link href="/books" className="btn-secondary">
+              <Link href="/books" className="bg-white text-primary hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-block">
                 View Our Books
               </Link>
             </div>
@@ -56,14 +61,24 @@ export default function Home() {
                 <Link href={`/books/${book.slug}`}>
                   <div className="bg-gradient-to-br from-primary-100 to-primary-50 h-64 flex items-center justify-center p-6 relative cursor-pointer">
                     {book.status && (
-                      <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
+                      <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {book.status}
                       </div>
                     )}
-                    <div className="text-center">
-                      <div className="text-5xl mb-3">📖</div>
-                      <div className="text-xs text-primary-700 font-semibold">{book.category}</div>
-                    </div>
+                    {book.coverImage ? (
+                      <Image
+                        src={book.coverImage}
+                        alt={book.title}
+                        width={200}
+                        height={300}
+                        className="object-contain h-full w-auto"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <div className="text-5xl mb-3">📖</div>
+                        <div className="text-xs text-primary-700 font-semibold">{book.category}</div>
+                      </div>
+                    )}
                   </div>
                 </Link>
                 <div className="p-6 flex flex-col flex-1">

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { authorsData, booksData } from "@/lib/booksData";
 import type { Metadata } from "next";
 
@@ -54,11 +55,23 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
         <div className="section-container">
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-12 mb-16">
-              {/* Author Image Placeholder */}
+              {/* Author Image */}
               <div className="flex-shrink-0">
-                <div className="w-64 h-64 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center shadow-xl">
-                  <span className="text-8xl">👤</span>
-                </div>
+                {author.photo ? (
+                  <div className="w-64 h-64 rounded-full overflow-hidden shadow-xl">
+                    <Image
+                      src={author.photo}
+                      alt={author.name}
+                      width={256}
+                      height={256}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-64 h-64 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center shadow-xl">
+                    <span className="text-8xl">👤</span>
+                  </div>
+                )}
               </div>
 
               {/* Author Bio */}
@@ -165,16 +178,26 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
               >
                 <div className="bg-gradient-to-br from-primary-100 to-primary-50 h-96 flex items-center justify-center p-8 relative">
                   {book.status && (
-                    <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                       {book.status}
                     </div>
                   )}
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">📖</div>
-                    <div className="text-sm text-primary-700 font-semibold">
-                      {book.series || book.category}
+                  {book.coverImage ? (
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      width={250}
+                      height={375}
+                      className="object-contain h-full w-auto"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">📖</div>
+                      <div className="text-sm text-primary-700 font-semibold">
+                        {book.series || book.category}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   {book.series && (
