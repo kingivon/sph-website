@@ -9,24 +9,22 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
   const downloads = [
     {
-      title: "The First-Time Author's Checklist",
-      description: "A practical guide that walks aspiring authors through the essential steps of the publishing journey. Covers manuscript preparation, editing stages, cover design considerations, formatting basics, Amazon setup, and launch strategies.",
+      title: "The First-Time Author's Publishing Checklist",
+      description: "A comprehensive PDF guide covering everything you need before, during, and after publishing your first book. Includes manuscript preparation, editing stages, cover design tips, and launch strategies.",
       type: "PDF Guide",
+      requiresForm: true,
     },
     {
-      title: "Book Marketing Essentials",
-      description: "Essential marketing strategies and actionable steps to promote your book effectively and reach your target audience.",
-      type: "Guide",
+      title: "Book Launch Timeline Template",
+      description: "A 90-day countdown planner to help you prepare for a successful book launch. Includes weekly tasks, marketing milestones, and pre-launch promotion ideas.",
+      type: "PDF Template",
+      requiresForm: false,
     },
     {
-      title: "Manuscript Formatting Template",
-      description: "Professional Word template to properly format your manuscript for submission according to industry standards.",
-      type: "Word Template",
-    },
-    {
-      title: "Publishing Glossary",
-      description: "Understand common publishing terms, contract clauses, and industry jargon to navigate your publishing journey with confidence.",
-      type: "PDF Reference",
+      title: "Self-Editing Checklist for Authors",
+      description: "Polish your manuscript before sending it to a professional editor. This checklist covers common errors, pacing issues, dialogue tips, and structural elements to review.",
+      type: "PDF Checklist",
+      requiresForm: false,
     },
   ];
 
@@ -86,27 +84,47 @@ export default function ResourcesPage() {
       </section>
 
       {/* Free Downloads */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="section-container">
-          <h2 className="mb-12">Free Downloads</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Free Downloads for Authors</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Practical resources to help you navigate your publishing journey with confidence.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {downloads.map((download, index) => (
-              <div key={index} className="bg-white border-2 border-gray-200 hover:border-primary rounded-lg p-8 hover:shadow-lg transition-all">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="inline-block text-sm text-white bg-primary px-3 py-1 rounded-full font-semibold mb-3">{download.type}</div>
-                    <h3 className="text-2xl mb-3 font-bold">{download.title}</h3>
-                    <p className="text-gray-700 mb-6 leading-relaxed">{download.description}</p>
+              <div key={index} className="bg-white border-2 border-gray-200 hover:border-primary rounded-lg p-8 hover:shadow-xl transition-all flex flex-col">
+                <div className="flex-1">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
                   </div>
-                  <svg className="w-12 h-12 text-primary flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+                  <div className="inline-block text-xs text-white bg-primary px-3 py-1 rounded-full font-semibold mb-4">{download.type}</div>
+                  <h3 className="text-xl mb-3 font-bold">{download.title}</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed">{download.description}</p>
                 </div>
-                <Link href="/contact" className="btn-primary w-full text-center block">
-                  Request Download
+                <Link
+                  href="/contact?resource=download"
+                  className="btn-primary w-full text-center block mt-auto"
+                >
+                  Request This Resource
                 </Link>
+                {download.requiresForm && (
+                  <p className="text-xs text-gray-500 text-center mt-3">
+                    We'll email you the download link
+                  </p>
+                )}
               </div>
             ))}
+          </div>
+          <div className="mt-12 text-center bg-primary-50 border-l-4 border-primary p-6 rounded-lg max-w-3xl mx-auto">
+            <p className="text-gray-700">
+              <strong className="text-primary">Note:</strong> To request any of these free resources, please contact us with the resource name. We'll send you the download link via email.
+            </p>
           </div>
         </div>
       </section>
