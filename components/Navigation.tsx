@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks: Array<{ href: string; label: string; isFeatured?: boolean }> = [
+  const navLinks: Array<{ href: string; label: string; isOrange?: boolean }> = [
     { href: "/", label: "Home" },
     { href: "/books", label: "Our Books" },
     { href: "/services", label: "Publishing Services" },
@@ -15,7 +15,7 @@ export default function Navigation() {
     { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
-    { href: "/course-development", label: "Course Development" },
+    { href: "/course-development", label: "Course Development", isOrange: true },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Navigation() {
               className="h-12 w-auto"
               priority
             />
-            <span className="text-xl font-bold text-charcoal">Sapiential Publishing</span>
+            <span className="text-xl font-bold text-[#F7931E]">Sapiential Publishing</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,8 +42,8 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={
-                  link.isFeatured
-                    ? "bg-primary text-white hover:bg-primary-600 transition-colors duration-200 font-bold px-4 py-2 rounded-lg"
+                  link.isOrange
+                    ? "text-[#F7931E] hover:text-primary-600 transition-colors duration-200 font-medium"
                     : "text-charcoal hover:text-primary transition-colors duration-200 font-medium"
                 }
               >
@@ -84,8 +84,8 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={
-                  link.isFeatured
-                    ? "block py-3 bg-primary text-white hover:bg-primary-600 transition-colors duration-200 font-bold px-4 rounded-lg mb-2"
+                  link.isOrange
+                    ? "block py-3 text-[#F7931E] hover:text-primary-600 transition-colors duration-200 font-medium"
                     : "block py-3 text-charcoal hover:text-primary transition-colors duration-200 font-medium"
                 }
                 onClick={() => setIsOpen(false)}

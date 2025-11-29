@@ -40,7 +40,7 @@ export const booksData: Book[] = [
     releaseDate: "January 16, 2026",
     asin: "Pre-order",
     isbn: "979-8992849066",
-    amazonUrl: "https://www.amazon.com/dp/B0DQ2G2ZG1",
+    amazonUrl: "https://a.co/d/2m87zLQ",
     features: [
       "31-Day Devotional",
       "Complete Study Guide with discussion questions for all 11 chapters",
@@ -63,7 +63,7 @@ export const booksData: Book[] = [
     rating: "#1,459 in Christian Faith",
     asin: "B0FWRZMY2K",
     isbn: "979-8992849073",
-    amazonUrl: "https://www.amazon.com/dp/B0FWRZMY2K"
+    amazonUrl: "https://a.co/d/60f8DW7"
   },
   {
     id: 6,
@@ -82,7 +82,7 @@ export const booksData: Book[] = [
     rating: "New Release",
     asin: "B0FTZXKSPT",
     isbn: "979-8992849059",
-    amazonUrl: "https://www.amazon.com/dp/B0FTZXKSPT"
+    amazonUrl: "https://a.co/d/9FEstCW"
   },
   {
     id: 5,
