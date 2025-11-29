@@ -36,15 +36,15 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-6 items-center ml-12">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={
                   link.isOrange
-                    ? "text-[#F7931E] hover:text-primary-600 transition-colors duration-200 font-medium"
-                    : "text-charcoal hover:text-primary transition-colors duration-200 font-medium"
+                    ? "text-sm text-[#F7931E] hover:text-primary-600 transition-colors duration-200 font-medium"
+                    : "text-sm text-charcoal hover:text-primary transition-colors duration-200 font-medium"
                 }
               >
                 {link.label}
@@ -85,8 +85,8 @@ export default function Navigation() {
                 href={link.href}
                 className={
                   link.isOrange
-                    ? "block py-3 text-[#F7931E] hover:text-primary-600 transition-colors duration-200 font-medium"
-                    : "block py-3 text-charcoal hover:text-primary transition-colors duration-200 font-medium"
+                    ? "block py-3 text-sm text-[#F7931E] hover:text-primary-600 transition-colors duration-200 font-medium"
+                    : "block py-3 text-sm text-charcoal hover:text-primary transition-colors duration-200 font-medium"
                 }
                 onClick={() => setIsOpen(false)}
               >
