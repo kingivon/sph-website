@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,22 +21,17 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      // Using Formspree for form handling
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      // Using Web3Forms for form handling
+      const form = e.currentTarget;
+      const formDataObj = new FormData(form);
+      formDataObj.append("access_key", "582635fa-742e-4fce-80c9-a59cd0763e18");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-          _replyto: formData.email,
-          _subject: `New Contact Form Submission: ${formData.subject}`,
-        }),
+        body: formDataObj,
       });
+
+      const data = await response.json();
 
       if (response.ok) {
         setStatus("success");
@@ -45,8 +42,13 @@ export default function ContactPage() {
           subject: "",
           message: "",
         });
+
+        // Redirect to home page after 2 seconds
+        setTimeout(() => {
+          router.push("/");
+        }, 2000);
       } else {
-        throw new Error("Failed to send message");
+        throw new Error(data.message || "Failed to send message");
       }
     } catch (error) {
       setStatus("error");
@@ -149,7 +151,7 @@ export default function ContactPage() {
                       </svg>
                       <div>
                         <p className="font-semibold text-green-800">Message sent successfully!</p>
-                        <p className="text-green-700 text-sm mt-1">Thank you for contacting us. We'll get back to you within 2 business days.</p>
+                        <p className="text-green-700 text-sm mt-1">Thank you for contacting us. Redirecting to home page...</p>
                       </div>
                     </div>
                   </div>
