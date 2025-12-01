@@ -28,8 +28,10 @@ export default function ContactPage() {
       formDataObj.append("name", formData.name);
       formDataObj.append("email", formData.email);
       formDataObj.append("phone", formData.phone);
-      formDataObj.append("subject", formData.subject);
+      formDataObj.append("subject", `${formData.subject} - Contact from ${formData.name}`);
+      formDataObj.append("inquiry_type", formData.subject); // Also send as separate field for clarity
       formDataObj.append("message", formData.message);
+      formDataObj.append("from_name", formData.name); // For better email display
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -240,11 +242,18 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                       >
                         <option value="">Select a subject</option>
-                        <option value="manuscript">Manuscript Submission</option>
-                        <option value="services">Publishing Services Inquiry</option>
-                        <option value="general">General Question</option>
-                        <option value="support">Support</option>
-                        <option value="other">Other</option>
+                        <option value="Manuscript Submission">Manuscript Submission</option>
+                        <option value="Publishing Services Inquiry">Publishing Services Inquiry</option>
+                        <option value="Request: First-Time Author's Publishing Checklist">Request: First-Time Author's Publishing Checklist</option>
+                        <option value="Request: Book Launch Timeline Template">Request: Book Launch Timeline Template</option>
+                        <option value="Request: Self-Editing Checklist for Authors">Request: Self-Editing Checklist for Authors</option>
+                        <option value="Speaking Engagement Inquiry">Speaking Engagement Inquiry</option>
+                        <option value="Wholesale/Bulk Order Inquiry">Wholesale/Bulk Order Inquiry</option>
+                        <option value="Media/Press Inquiry">Media/Press Inquiry</option>
+                        <option value="Partnership Opportunity">Partnership Opportunity</option>
+                        <option value="General Question">General Question</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                   </div>
