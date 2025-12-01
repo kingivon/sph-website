@@ -22,9 +22,14 @@ export default function ContactPage() {
 
     try {
       // Using Web3Forms for form handling
-      const form = e.currentTarget;
-      const formDataObj = new FormData(form);
+      // Manually construct FormData from state to avoid controlled component issues
+      const formDataObj = new FormData();
       formDataObj.append("access_key", "582635fa-742e-4fce-80c9-a59cd0763e18");
+      formDataObj.append("name", formData.name);
+      formDataObj.append("email", formData.email);
+      formDataObj.append("phone", formData.phone);
+      formDataObj.append("subject", formData.subject);
+      formDataObj.append("message", formData.message);
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -33,7 +38,7 @@ export default function ContactPage() {
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && data.success) {
         setStatus("success");
         setFormData({
           name: "",
@@ -52,7 +57,8 @@ export default function ContactPage() {
       }
     } catch (error) {
       setStatus("error");
-      setErrorMessage("There was an error sending your message. Please try emailing us directly at info@sapientialpublishing.com");
+      const errorMsg = error instanceof Error ? error.message : "Unknown error";
+      setErrorMessage(`There was an error sending your message: ${errorMsg}. Please try emailing us directly at info@sapientialpublishing.com`);
       console.error("Form submission error:", error);
     }
   };
