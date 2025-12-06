@@ -33,7 +33,7 @@ export default function BlogPost() {
               <div className="flex items-center text-gray-600 text-sm gap-4">
                 <span>By SPH Editorial Team</span>
                 <span>•</span>
-                <time>November 15, 2025</time>
+                <time>August 2, 2025</time>
               </div>
             </div>
 

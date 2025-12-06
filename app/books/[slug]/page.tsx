@@ -21,8 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const fullTitle = book.subtitle ? `${book.title}: ${book.subtitle}` : book.title;
   return {
-    title: `${book.title} - Sapiential Publishing House`,
+    title: `${fullTitle} - Sapiential Publishing House`,
     description: book.description,
   };
 }
@@ -127,7 +128,10 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
               {book.series && (
                 <div className="text-primary font-semibold mb-3">{book.series}</div>
               )}
-              <h1 className="mb-6">{book.title}</h1>
+              <h1 className="mb-3">{book.title}</h1>
+              {book.subtitle && (
+                <p className="text-2xl text-primary font-semibold mb-6">{book.subtitle}</p>
+              )}
 
               <Link href={`/authors/${book.authorSlug}`}>
                 <p className="text-xl text-gray-700 mb-6 hover:text-primary transition-colors cursor-pointer">

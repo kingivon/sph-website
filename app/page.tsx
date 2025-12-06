@@ -83,10 +83,15 @@ export default function Home() {
                 </Link>
                 <div className="p-6 flex flex-col flex-1">
                   <Link href={`/books/${book.slug}`}>
-                    <h3 className="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors cursor-pointer">
+                    <h3 className="text-lg font-bold mb-1 line-clamp-2 group-hover:text-primary transition-colors cursor-pointer">
                       {book.title}
                     </h3>
                   </Link>
+                  {book.subtitle && (
+                    <p className="text-primary text-sm font-semibold mb-2">
+                      {book.subtitle}
+                    </p>
+                  )}
                   <Link href={`/authors/${book.authorSlug}`}>
                     <p className="text-gray-600 text-sm mb-3 hover:text-primary transition-colors cursor-pointer">
                       {book.author}

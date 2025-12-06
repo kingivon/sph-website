@@ -10,11 +10,12 @@ export default function BooksPage() {
 
   const filteredBooks = selectedAuthor === "all"
     ? booksData
-    : booksData.filter(book =>
-        selectedAuthor === "ivon"
-          ? book.authorSlug === "ivon-valerie"
-          : book.authorSlug === "marcus-raymond"
-      );
+    : booksData.filter(book => {
+        if (selectedAuthor === "ivon") return book.authorSlug === "ivon-valerie";
+        if (selectedAuthor === "marcus") return book.authorSlug === "marcus-raymond";
+        if (selectedAuthor === "marcia") return book.authorSlug === "marcia-thompson";
+        return false;
+      });
 
   return (
     <div>
@@ -40,7 +41,7 @@ export default function BooksPage() {
                   : "bg-white text-charcoal hover:bg-gray-100"
               }`}
             >
-              All Books ({booksData.length})
+              All Books (9)
             </button>
             <button
               onClick={() => setSelectedAuthor("ivon")}
@@ -61,6 +62,16 @@ export default function BooksPage() {
               }`}
             >
               Marcus J. Raymond (1)
+            </button>
+            <button
+              onClick={() => setSelectedAuthor("marcia")}
+              className={`px-6 py-2 rounded-lg font-medium transition-colors ${
+                selectedAuthor === "marcia"
+                  ? "bg-primary text-white"
+                  : "bg-white text-charcoal hover:bg-gray-100"
+              }`}
+            >
+              Marcia J. Thompson (1)
             </button>
           </div>
         </div>
@@ -100,10 +111,13 @@ export default function BooksPage() {
                     <div className="text-xs text-primary font-semibold mb-2">{book.series}</div>
                   )}
                   <Link href={`/books/${book.slug}`}>
-                    <h3 className="text-xl font-bold mb-2 hover:text-primary transition-colors cursor-pointer">
+                    <h3 className="text-xl font-bold mb-1 hover:text-primary transition-colors cursor-pointer">
                       {book.title}
                     </h3>
                   </Link>
+                  {book.subtitle && (
+                    <p className="text-primary text-sm font-semibold mb-2">{book.subtitle}</p>
+                  )}
                   <Link href={`/authors/${book.authorSlug}`}>
                     <p className="text-gray-600 mb-2 hover:text-primary transition-colors cursor-pointer">
                       {book.author}

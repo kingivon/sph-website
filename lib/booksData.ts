@@ -3,6 +3,7 @@ export interface Book {
   id: number;
   slug: string;
   title: string;
+  subtitle?: string;
   author: string;
   authorSlug: string;
   year: string;
@@ -47,6 +48,30 @@ export const booksData: Book[] = [
       "31-Day Devotional",
       "Complete Study Guide with discussion questions for all 11 chapters",
       "Practical action steps at the end of each chapter"
+    ]
+  },
+  {
+    id: 9,
+    slug: "from-burned-out-to-breakthrough",
+    title: "From Burned Out to Breakthrough",
+    subtitle: "A 30-Day Devotional for Professional Women",
+    author: "Marcia J. Thompson, MBA, CPC",
+    authorSlug: "marcia-thompson",
+    year: "2025",
+    category: "Christian Living",
+    pages: 150,
+    kindle: "$9.99",
+    description: "You were made for more than exhaustion. This 30-day devotional speaks directly to the professional woman who has given everything to her career only to find herself depleted, disconnected, and wondering if this is all there is.",
+    fullDescription: "You were made for more than exhaustion. This 30-day devotional speaks directly to the professional woman who has given everything to her career only to find herself depleted, disconnected, and wondering if this is all there is.\n\nThrough daily Scripture, practical wisdom, and guided reflection, you will move from burnout to breakthrough as you rediscover rest, release control, and renew your God-given purpose. Each day includes teaching, prayer, reflection questions, action steps, and journaling space to guide your transformation.\n\nFor the professional woman ready to move from exhaustion to sustainable purpose anchored in faith, work, and rest.",
+    asin: "B0DPQXW1KY",
+    amazonUrl: "https://a.co/d/15iXD7X",
+    coverImage: "/images/books/from-burned-out-to-breakthrough.png",
+    features: [
+      "30-Day Devotional Format",
+      "Daily Scripture and reflection questions",
+      "Practical action steps for each day",
+      "Journaling space for personal transformation",
+      "Paperback edition coming soon"
     ]
   },
   {
@@ -223,5 +248,14 @@ export const authorsData: Author[] = [
     fullBio: "Marcus J. Raymond is an author and speaker whose writing emerges from seasons of profound personal transformation. His work explores the intersection of faith, suffering, and breakthrough, offering raw testimony and biblical insight for those navigating life's most difficult seasons.\n\nMarcus writes for the weary believer who refuses to give up, drawing from his own journey through loss, waiting, and eventual restoration. He is committed to helping others discover that their wilderness has purpose and their breakthrough is closer than it appears.",
     booksCount: 1,
     photo: "/images/marcus-raymond.png",
+  },
+  {
+    slug: "marcia-thompson",
+    name: "Marcia J. Thompson, MBA, CPC",
+    title: "Certified Professional Coach",
+    bio: "Marcia J. Thompson, MBA, CPC is a certified professional coach who specializes in helping high-achieving women recover from burnout and rediscover sustainable purpose.",
+    fullBio: "Marcia J. Thompson, MBA, CPC is a certified professional coach who specializes in helping high-achieving women recover from burnout and rediscover sustainable purpose. Drawing from her own journey through professional exhaustion and her training in both business leadership and transformational coaching, she guides women toward the integration of faith, work, and rest that leads to lasting breakthrough.",
+    booksCount: 1,
+    photo: "/images/authors/marcia-thompson.png",
   }
 ];

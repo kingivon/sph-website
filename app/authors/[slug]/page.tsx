@@ -204,10 +204,13 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                     <div className="text-xs text-primary font-semibold mb-2">{book.series}</div>
                   )}
                   <Link href={`/books/${book.slug}`}>
-                    <h3 className="text-xl font-bold mb-2 hover:text-primary transition-colors cursor-pointer">
+                    <h3 className="text-xl font-bold mb-1 hover:text-primary transition-colors cursor-pointer">
                       {book.title}
                     </h3>
                   </Link>
+                  {book.subtitle && (
+                    <p className="text-primary text-sm font-semibold mb-2">{book.subtitle}</p>
+                  )}
                   <div className="flex items-center gap-3 text-sm text-gray-500 mb-4">
                     <span>{book.year}</span>
                     <span>•</span>
