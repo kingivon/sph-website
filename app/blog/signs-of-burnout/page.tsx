@@ -23,7 +23,7 @@ export default function BlogPost() {
       {/* Article */}
       <article className="py-16">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {/* Article Header */}
             <div className="mb-12">
               <div className="inline-block bg-primary-100 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -38,7 +38,16 @@ export default function BlogPost() {
             </div>
 
             {/* Article Content */}
-            <div className="prose prose-lg max-w-none">
+            <div className="prose max-w-none
+              [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:leading-tight
+              [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-gray-800 [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:leading-snug
+              [&>p]:text-base [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
+              [&>ul]:my-6 [&>ul]:space-y-3 [&>ul>li]:text-base [&>ul>li]:text-gray-700 [&>ul>li]:leading-relaxed
+              [&>ol]:my-6 [&>ol]:space-y-3 [&>ol>li]:text-base [&>ol>li]:text-gray-700 [&>ol>li]:leading-relaxed
+              [&_strong]:font-semibold [&_strong]:text-gray-900
+              [&_em]:italic
+              [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-6 [&>blockquote]:my-6 [&>blockquote]:italic [&>blockquote]:text-gray-600
+            ">
               <p className="text-xl text-gray-700 mb-8">
                 You've been running on empty for so long that you've forgotten what it feels like to be full. Burnout doesn't announce itself with a dramatic crash—it creeps in quietly, disguised as dedication, commitment, and sacrifice. Here are five warning signs that you're experiencing burnout and what you can do about it.
               </p>
