@@ -85,61 +85,68 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 </div>
 
                 {/* Purchase Buttons */}
-                <div className="mt-8 space-y-4">
-                  {book.kindleUrl && book.paperbackUrl ? (
-                    <>
-                      <a
-                        href={book.paperbackUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary w-full text-center block text-lg py-4"
-                      >
-                        Buy Paperback on Amazon
-                      </a>
+                <div className="mt-8 space-y-3">
+                  {/* Kindle Button */}
+                  {book.kindle && (
+                    book.kindleUrl ? (
                       <a
                         href={book.kindleUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white w-full text-center block text-lg py-4 rounded-lg font-semibold transition-colors duration-200"
+                        className="btn-primary w-full text-center block py-4 rounded-lg font-semibold transition-colors duration-200"
                       >
-                        Buy Kindle on Amazon
+                        <div className="text-lg">
+                          {book.status === "Pre-Order" ? "Pre-order Kindle" : "Buy Kindle"}
+                        </div>
+                        <div className="text-sm opacity-90 mt-1">{book.kindle}</div>
                       </a>
-                    </>
-                  ) : (
-                    <a
-                      href={book.amazonUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary w-full text-center block text-lg py-4"
-                    >
-                      {book.status === "Pre-Order" ? "Pre-Order on Amazon" : "Buy on Amazon"}
-                    </a>
+                    ) : (
+                      <div className="w-full text-center block py-4 rounded-lg border-2 border-gray-300 bg-gray-100 text-gray-500 cursor-not-allowed">
+                        <div className="text-lg font-semibold">Kindle</div>
+                        <div className="text-sm mt-1">{book.kindle}</div>
+                      </div>
+                    )
                   )}
 
-                  {/* Pricing */}
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-bold mb-3">Available Formats:</h3>
-                    <div className="space-y-2">
-                      {book.kindle && (
-                        <div className="flex justify-between">
-                          <span className="text-gray-700">Kindle:</span>
-                          <span className="font-semibold text-charcoal">{book.kindle}</span>
-                        </div>
-                      )}
-                      {book.paperback && (
-                        <div className="flex justify-between">
-                          <span className="text-gray-700">Paperback:</span>
-                          <span className="font-semibold text-charcoal">{book.paperback}</span>
-                        </div>
-                      )}
-                      {book.hardcover && (
-                        <div className="flex justify-between">
-                          <span className="text-gray-700">Hardcover:</span>
-                          <span className="font-semibold text-charcoal">{book.hardcover}</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                  {/* Paperback Button */}
+                  {book.paperback && (
+                    book.paperbackUrl ? (
+                      <a
+                        href={book.paperbackUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white w-full text-center block py-4 rounded-lg font-semibold transition-colors duration-200"
+                      >
+                        <div className="text-lg">Buy Paperback</div>
+                        <div className="text-sm opacity-90 mt-1">{book.paperback}</div>
+                      </a>
+                    ) : (
+                      <div className="w-full text-center block py-4 rounded-lg border-2 border-gray-300 bg-gray-100 text-gray-500 cursor-not-allowed">
+                        <div className="text-lg font-semibold">Paperback</div>
+                        <div className="text-sm mt-1">{book.paperback}</div>
+                      </div>
+                    )
+                  )}
+
+                  {/* Hardcover Button */}
+                  {book.hardcover && (
+                    book.hardcoverUrl ? (
+                      <a
+                        href={book.hardcoverUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white w-full text-center block py-4 rounded-lg font-semibold transition-colors duration-200"
+                      >
+                        <div className="text-lg">Buy Hardcover</div>
+                        <div className="text-sm opacity-90 mt-1">{book.hardcover}</div>
+                      </a>
+                    ) : (
+                      <div className="w-full text-center block py-4 rounded-lg border-2 border-gray-300 bg-gray-100 text-gray-500 cursor-not-allowed">
+                        <div className="text-lg font-semibold">Hardcover</div>
+                        <div className="text-sm mt-1">{book.hardcover}</div>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -168,9 +175,7 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 </div>
                 <div>
                   <div className="text-sm text-gray-600">Pages</div>
-                  <div className="font-semibold text-charcoal">
-                    {book.pages} {book.paperback && "(paperback)"}
-                  </div>
+                  <div className="font-semibold text-charcoal">{book.pages}</div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600">Category</div>

@@ -21,6 +21,7 @@ export interface Book {
   amazonUrl: string;
   kindleUrl?: string;
   paperbackUrl?: string;
+  hardcoverUrl?: string;
   status?: string;
   releaseDate?: string;
   features?: string[];
@@ -37,7 +38,9 @@ export const booksData: Book[] = [
     year: "2026",
     category: "Christian Faith",
     pages: 309,
-    kindle: "$9.99 (Pre-order)",
+    kindle: "$9.99",
+    paperback: "$12.99 (Coming January 16, 2026)",
+    hardcover: "$27.95 (Coming January 16, 2026)",
     description: "Do you feel like you're one prayer away from quitting? THE KNOCK reveals why most believers quit right before their miracle arrives, and more importantly, how to outlast the wait until the door finally opens. Drawing from a transformative 18-month wilderness, this book unpacks the powerful progression hidden in Matthew 7:7-8.",
     fullDescription: "Do you feel like you're one prayer away from quitting? THE KNOCK reveals why most believers quit right before their miracle arrives, and more importantly, how to outlast the wait until the door finally opens. Drawing from a transformative 18-month wilderness, this book unpacks the powerful progression hidden in Matthew 7:7-8.",
     status: "Pre-Order",
@@ -45,6 +48,7 @@ export const booksData: Book[] = [
     asin: "Pre-order",
     isbn: "979-8992849066",
     amazonUrl: "https://a.co/d/2m87zLQ",
+    kindleUrl: "https://a.co/d/2m87zLQ",
     coverImage: "/images/books/the-knock.png",
     features: [
       "31-Day Devotional",
@@ -87,7 +91,7 @@ export const booksData: Book[] = [
     authorSlug: "marcus-raymond",
     year: "2025",
     category: "Christian Faith",
-    pages: 401,
+    pages: 279,
     kindle: "$9.99",
     paperback: "$16.99",
     description: "You're not supposed to feel this lost. Not when you've been faithful. Not when you've prayed. Not when you've done everything right. But here you are in a season you never chose, walking through darkness you don't understand. What if this wilderness isn't what you think it is? The Wilderness Season is raw, honest testimony from someone who walked through three years of devastating loss and emerged transformed.",
@@ -96,6 +100,8 @@ export const booksData: Book[] = [
     asin: "B0FWRZMY2K",
     isbn: "979-8992849073",
     amazonUrl: "https://a.co/d/60f8DW7",
+    kindleUrl: "https://a.co/d/cdtxuIL",
+    paperbackUrl: "https://a.co/d/c4EOsqN",
     coverImage: "/images/books/the-wilderness-season.png"
   },
   {
@@ -106,7 +112,7 @@ export const booksData: Book[] = [
     authorSlug: "ivon-valerie",
     year: "2025",
     category: "Christian Living",
-    pages: 401,
+    pages: 241,
     kindle: "$19.99",
     paperback: "$22.99",
     hardcover: "$29.99",
@@ -116,6 +122,9 @@ export const booksData: Book[] = [
     asin: "B0FTZXKSPT",
     isbn: "979-8992849059",
     amazonUrl: "https://a.co/d/9FEstCW",
+    kindleUrl: "https://a.co/d/3lINwO1",
+    paperbackUrl: "https://a.co/d/0xWpi6S",
+    hardcoverUrl: "https://a.co/d/hFhwgXe",
     coverImage: "/images/books/the-unknown.png"
   },
   {
@@ -127,13 +136,15 @@ export const booksData: Book[] = [
     year: "2025",
     category: "Trauma Healing",
     series: "Trauma Detox Series - Book 3",
-    pages: 127,
+    pages: 125,
     kindle: "$9.99",
     paperback: "$19.99",
     description: "The final book of the transformative Trauma Detox Series, guiding you to a life of abundance, joy, and flourishing. Bloom challenges you to embrace your identity, rediscover your purpose, and create a life marked by growth. This book isn't just about surviving: it's about flourishing.",
     fullDescription: "The final book of the transformative Trauma Detox Series, guiding you to a life of abundance, joy, and flourishing.\n\nBloom challenges you to embrace your identity, rediscover your purpose, and create a life marked by growth. This book isn't just about surviving: it's about flourishing.\n\nAfter you've named your scars and mended what was broken, it's time to bloom—to step into the vibrant, purposeful life God always intended for you.",
     asin: "B0DXDKPKXC",
-    amazonUrl: "https://www.amazon.com/dp/B0DXDKPKXC",
+    amazonUrl: "https://a.co/d/cQGR88E",
+    kindleUrl: "https://a.co/d/cQGR88E",
+    paperbackUrl: "https://a.co/d/9s7kOHz",
     coverImage: "/images/books/bloom.png"
   },
   {
@@ -145,13 +156,15 @@ export const booksData: Book[] = [
     year: "2025",
     category: "Trauma Healing",
     series: "Trauma Detox Series - Book 2",
-    pages: 127,
+    pages: 125,
     kindle: "$9.99",
     paperback: "$19.99",
     description: "Healing is not just about moving forward: it's about restoring what was lost and rebuilding what was broken. Mended is your guide to navigating the path of restoration with courage and faith, helping you repair broken relationships, rebuild self-worth, and rediscover joy after trauma.",
     fullDescription: "Healing is not just about moving forward: it's about restoring what was lost and rebuilding what was broken.\n\nMended is your guide to navigating the path of restoration with courage and faith, helping you repair broken relationships, rebuild self-worth, and rediscover joy after trauma.\n\nThis is the steady, intentional work of putting the pieces back together—not as they were, but better, stronger, and anchored in God's grace.",
     asin: "B0DXDDHCG8",
-    amazonUrl: "https://www.amazon.com/dp/B0DXDDHCG8",
+    amazonUrl: "https://a.co/d/cwY5jQx",
+    kindleUrl: "https://a.co/d/cwY5jQx",
+    paperbackUrl: "https://a.co/d/7gzS1VW",
     coverImage: "/images/books/mended.png"
   },
   {
@@ -163,13 +176,15 @@ export const booksData: Book[] = [
     year: "2025",
     category: "Trauma Healing",
     series: "Trauma Detox Series - Book 1",
-    pages: 120,
+    pages: 118,
     kindle: "$9.99",
     paperback: "$19.99",
     description: "Life leaves scars. Some are visible, while others lie hidden deep within the heart. Scarred is the first book in the Trauma Detox Series, providing empathetic guidance and biblical truth to help you name the pain and begin the healing journey.",
     fullDescription: "Life leaves scars. Some are visible, while others lie hidden deep within the heart.\n\nScarred is the first book in the Trauma Detox Series, providing empathetic guidance and biblical truth to help you name the pain and begin the healing journey.\n\nThis book meets you where you are—in the aftermath of what broke you—and gently leads you toward the hope of healing. Your scars are not the end of your story. They are proof that you survived.",
     asin: "B0DXFQ6NDC",
-    amazonUrl: "https://www.amazon.com/dp/B0DXFQ6NDC",
+    amazonUrl: "https://a.co/d/a8xRJH4",
+    kindleUrl: "https://a.co/d/a8xRJH4",
+    paperbackUrl: "https://a.co/d/f8Rmpkh",
     coverImage: "/images/books/scarred.png"
   },
   {
@@ -180,7 +195,7 @@ export const booksData: Book[] = [
     authorSlug: "ivon-valerie",
     year: "2025",
     category: "Christian Self Help",
-    pages: 170,
+    pages: 186,
     kindle: "$9.99",
     paperback: "$22.90",
     description: "A profound and enlightening book that guides readers on a spiritual journey of self-discovery, helping them unlock their God-given potential and embrace their ultimate life purpose. Through insightful reflections and practical exercises, readers learn to dispel anxiety and find direction by gaining clarity on their innate talents, core motivations, and life experiences that serve as clues guiding them toward their divine destiny.",
@@ -188,7 +203,9 @@ export const booksData: Book[] = [
     rating: "5.0 out of 5 stars",
     asin: "B0DW1LWRKY",
     isbn: "978-0997465563",
-    amazonUrl: "https://www.amazon.com/dp/B0DW1LWRKY",
+    amazonUrl: "https://a.co/d/1gCn0gx",
+    kindleUrl: "https://a.co/d/1gCn0gx",
+    paperbackUrl: "https://a.co/d/4btvpjl",
     coverImage: "/images/books/the-meaningful-life.png"
   },
   {
@@ -199,7 +216,7 @@ export const booksData: Book[] = [
     authorSlug: "ivon-valerie",
     year: "2023",
     category: "Christian Prayer",
-    pages: 422,
+    pages: 472,
     kindle: "$9.99",
     paperback: "$25.99",
     hardcover: "$35.95",
@@ -208,7 +225,10 @@ export const booksData: Book[] = [
     rating: "5.0 out of 5 stars",
     asin: "B0BV76NV8J",
     isbn: "978-0997465532",
-    amazonUrl: "https://www.amazon.com/dp/B0BV76NV8J",
+    amazonUrl: "https://a.co/d/hIghyNZ",
+    kindleUrl: "https://a.co/d/hIghyNZ",
+    paperbackUrl: "https://a.co/d/c2K10R0",
+    hardcoverUrl: "https://a.co/d/jeSuprD",
     coverImage: "/images/books/prayer-lifestyle.png"
   }
 ];
