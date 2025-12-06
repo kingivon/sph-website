@@ -19,6 +19,8 @@ export interface Book {
   asin: string;
   isbn?: string;
   amazonUrl: string;
+  kindleUrl?: string;
+  paperbackUrl?: string;
   status?: string;
   releaseDate?: string;
   features?: string[];
@@ -59,19 +61,22 @@ export const booksData: Book[] = [
     authorSlug: "marcia-thompson",
     year: "2025",
     category: "Christian Living",
-    pages: 150,
+    pages: 308,
     kindle: "$9.99",
+    paperback: "$17.99",
     description: "You were made for more than exhaustion. This 30-day devotional speaks directly to the professional woman who has given everything to her career only to find herself depleted, disconnected, and wondering if this is all there is.",
     fullDescription: "You were made for more than exhaustion. This 30-day devotional speaks directly to the professional woman who has given everything to her career only to find herself depleted, disconnected, and wondering if this is all there is.\n\nThrough daily Scripture, practical wisdom, and guided reflection, you will move from burnout to breakthrough as you rediscover rest, release control, and renew your God-given purpose. Each day includes teaching, prayer, reflection questions, action steps, and journaling space to guide your transformation.\n\nFor the professional woman ready to move from exhaustion to sustainable purpose anchored in faith, work, and rest.",
     asin: "B0DPQXW1KY",
     amazonUrl: "https://a.co/d/15iXD7X",
+    kindleUrl: "https://a.co/d/15iXD7X",
+    paperbackUrl: "https://a.co/d/e9WRyXd",
     coverImage: "/images/books/from-burned-out-to-breakthrough.png",
     features: [
       "30-Day Devotional Format",
       "Daily Scripture and reflection questions",
       "Practical action steps for each day",
       "Journaling space for personal transformation",
-      "Paperback edition coming soon"
+      "Available in Paperback and Kindle formats"
     ]
   },
   {

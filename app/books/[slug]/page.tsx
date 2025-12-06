@@ -86,14 +86,35 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
 
                 {/* Purchase Buttons */}
                 <div className="mt-8 space-y-4">
-                  <a
-                    href={book.amazonUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary w-full text-center block text-lg py-4"
-                  >
-                    {book.status === "Pre-Order" ? "Pre-Order on Amazon" : "Buy on Amazon"}
-                  </a>
+                  {book.kindleUrl && book.paperbackUrl ? (
+                    <>
+                      <a
+                        href={book.paperbackUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary w-full text-center block text-lg py-4"
+                      >
+                        Buy Paperback on Amazon
+                      </a>
+                      <a
+                        href={book.kindleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white w-full text-center block text-lg py-4 rounded-lg font-semibold transition-colors duration-200"
+                      >
+                        Buy Kindle on Amazon
+                      </a>
+                    </>
+                  ) : (
+                    <a
+                      href={book.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary w-full text-center block text-lg py-4"
+                    >
+                      {book.status === "Pre-Order" ? "Pre-Order on Amazon" : "Buy on Amazon"}
+                    </a>
+                  )}
 
                   {/* Pricing */}
                   <div className="bg-gray-50 p-6 rounded-lg">
@@ -147,7 +168,9 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 </div>
                 <div>
                   <div className="text-sm text-gray-600">Pages</div>
-                  <div className="font-semibold text-charcoal">{book.pages}</div>
+                  <div className="font-semibold text-charcoal">
+                    {book.pages} {book.paperback && "(paperback)"}
+                  </div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600">Category</div>
