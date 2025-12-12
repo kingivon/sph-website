@@ -298,15 +298,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Map Section - Placeholder */}
-      <section className="py-16 bg-gray-50">
-        <div className="section-container">
-          <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-            <p className="text-gray-600 text-lg">Map Location (To be integrated)</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
