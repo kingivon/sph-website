@@ -64,6 +64,15 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="tel:+17215268363" className="hover:text-primary transition-colors">
+                  +1 721 526 8363
+                </a>
+              </li>
+              <li className="text-sm">
+                16 Camelia Road, Betty's Estate<br />
+                Philipsburg, Sint Maarten D.W.I.
+              </li>
+              <li>
                 <Link href="/contact" className="text-primary hover:text-primary-400 transition-colors">
                   Contact Form
                 </Link>

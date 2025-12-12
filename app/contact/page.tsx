@@ -116,8 +116,10 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-700">(555) 123-4567</p>
-                    <p className="text-sm text-gray-600">Mon-Fri 9am-5pm EST</p>
+                    <a href="tel:+17215268363" className="text-primary hover:text-primary-600 font-medium">
+                      +1 721 526 8363
+                    </a>
+                    <p className="text-sm text-gray-600 mt-1">Mon-Fri 10am-4pm (Lunch 12pm-2pm)</p>
                   </div>
                 </div>
 
@@ -128,19 +130,18 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
-                    <p className="text-gray-700">123 Publishing Lane</p>
-                    <p className="text-gray-700">Christian City, ST 12345</p>
-                    <p className="text-gray-700">United States</p>
+                    <p className="text-gray-700">Sapiential Publishing House</p>
+                    <p className="text-gray-700">16 Camelia Road, Betty's Estate</p>
+                    <p className="text-gray-700">Philipsburg, Sint Maarten D.W.I.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 p-6 bg-primary-50 rounded-lg">
-                <h3 className="font-semibold mb-3">Office Hours</h3>
+                <h3 className="font-semibold mb-3">Business Hours</h3>
                 <div className="space-y-2 text-gray-700">
-                  <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                  <p>Saturday: 10:00 AM - 2:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Monday - Friday: 10:00 AM - 4:00 PM</p>
+                  <p>Lunch Break: 12:00 PM - 2:00 PM</p>
                 </div>
               </div>
             </div>
@@ -226,7 +227,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                        placeholder="(555) 123-4567"
+                        placeholder="+1 721 526 8363"
                       />
                     </div>
                     <div>
