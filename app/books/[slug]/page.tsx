@@ -84,19 +84,19 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                   )}
                 </div>
 
-                {/* Availability Notice */}
-                <div className="mt-8 bg-primary-50 border-2 border-primary p-6 rounded-lg text-center">
-                  <div className="text-lg font-semibold text-primary mb-2">
-                    Coming Soon to Retailers
-                  </div>
-                  {(book.kindle || book.paperback || book.hardcover) && (
-                    <div className="text-sm text-gray-700">
-                      {book.kindle && <div>Kindle: {book.kindle}</div>}
-                      {book.paperback && <div>Paperback: {book.paperback}</div>}
-                      {book.hardcover && <div>Hardcover: {book.hardcover}</div>}
+                {/* Pricing Information */}
+                {(book.kindle || book.paperback || book.hardcover) && (
+                  <div className="mt-8 bg-primary-50 border-2 border-primary p-6 rounded-lg">
+                    <div className="text-lg font-semibold text-primary mb-3 text-center">
+                      Available Formats
                     </div>
-                  )}
-                </div>
+                    <div className="space-y-2 text-center text-gray-700">
+                      {book.kindle && <div className="text-lg">eBook: <span className="font-semibold">{book.kindle}</span></div>}
+                      {book.paperback && <div className="text-lg">Paperback: <span className="font-semibold">{book.paperback}</span></div>}
+                      {book.hardcover && <div className="text-lg">Hardcover: <span className="font-semibold">{book.hardcover}</span></div>}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -178,9 +178,9 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
 
               {/* Call to Action */}
               <div className="bg-primary text-white p-8 rounded-lg text-center">
-                <h3 className="text-2xl font-bold mb-4 text-white">Coming Soon</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white">Get This Book</h3>
                 <p className="text-primary-50 text-lg">
-                  This book will be available at retailers soon. Check back for updates.
+                  Explore this powerful resource for spiritual growth and transformation.
                 </p>
               </div>
             </div>

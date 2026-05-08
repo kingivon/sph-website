@@ -108,9 +108,6 @@ export default function Home() {
                   <Link href={`/books/${book.slug}`} className="btn-primary text-center text-sm py-2 w-full block mt-auto">
                     View Details
                   </Link>
-                  <div className="text-center text-xs text-gray-600 mt-2">
-                    Coming Soon to Retailers
-                  </div>
                 </div>
               </div>
             ))}

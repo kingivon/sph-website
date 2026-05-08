@@ -255,9 +255,6 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                       View Details
                     </Link>
                   </div>
-                  <div className="text-center text-sm text-gray-600 mt-3">
-                    Coming Soon to Retailers
-                  </div>
                 </div>
               </div>
             ))}
