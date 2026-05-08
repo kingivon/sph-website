@@ -105,18 +105,11 @@ export default function Home() {
                       Releasing {book.releaseDate}
                     </div>
                   )}
-                  <div className="flex gap-2 mt-auto">
-                    <Link href={`/books/${book.slug}`} className="flex-1 btn-secondary text-center text-sm py-2">
-                      Details
-                    </Link>
-                    <a
-                      href={book.amazonUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 btn-primary text-center text-sm py-2"
-                    >
-                      {book.status === "Pre-Order" ? "Pre-Order" : "Buy Now"}
-                    </a>
+                  <Link href={`/books/${book.slug}`} className="btn-primary text-center text-sm py-2 w-full block mt-auto">
+                    View Details
+                  </Link>
+                  <div className="text-center text-xs text-gray-600 mt-2">
+                    Coming Soon to Retailers
                   </div>
                 </div>
               </div>

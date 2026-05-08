@@ -251,17 +251,12 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                   )}
 
                   <div className="flex gap-2">
-                    <Link href={`/books/${book.slug}`} className="flex-1 btn-secondary text-center">
+                    <Link href={`/books/${book.slug}`} className="flex-1 btn-primary text-center">
                       View Details
                     </Link>
-                    <a
-                      href={book.amazonUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 btn-primary text-center"
-                    >
-                      {book.status === "Pre-Order" ? "Pre-Order" : "Buy"}
-                    </a>
+                  </div>
+                  <div className="text-center text-sm text-gray-600 mt-3">
+                    Coming Soon to Retailers
                   </div>
                 </div>
               </div>

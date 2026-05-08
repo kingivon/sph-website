@@ -88,7 +88,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Sapiential Publishing House. All rights reserved.</p>
+          <p className="mb-2">&copy; {currentYear} Sapiential Publishing House. All rights reserved.</p>
+          <p className="text-sm text-gray-500">
+            Sapiential Publishing House is an imprint of The Lorstan Group LLC, Wyoming, USA.
+          </p>
         </div>
       </div>
     </footer>

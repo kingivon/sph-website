@@ -30,6 +30,22 @@ export interface Book {
 
 export const booksData: Book[] = [
   {
+    id: 10,
+    slug: "shifting-into-gods-timing",
+    title: "Shifting Into God's Timing",
+    subtitle: "A Prophetic Devotional Series Drawn From the Depths of God's Word",
+    author: "Dr. Clevin Ambo",
+    authorSlug: "clevin-ambo",
+    year: "2025",
+    category: "Christian Faith",
+    pages: 0,
+    description: "The Wells of Revelation is a 31-day prophetic devotional journey designed to take you deeper. Each week is anchored by a central theme and Scripture, guiding you through daily reflections that are theological in substance, pastoral in tone, and practical in application. Every devotional concludes with seven prophetic prayer points, each rooted in Scripture and crafted to help you pray with faith, intentionality, and holy expectation.",
+    fullDescription: "The Wells of Revelation is a 31-day prophetic devotional journey designed to take you deeper. Each week is anchored by a central theme and Scripture, guiding you through daily reflections that are theological in substance, pastoral in tone, and practical in application. Every devotional concludes with seven prophetic prayer points, each rooted in Scripture and crafted to help you pray with faith, intentionality, and holy expectation.",
+    asin: "",
+    amazonUrl: "",
+    coverImage: "/images/books/shifting-into-gods-timing.png"
+  },
+  {
     id: 7,
     slug: "the-knock",
     title: "THE KNOCK: Why Most Believers Stop One Prayer Away From Their Miracle",
@@ -45,10 +61,7 @@ export const booksData: Book[] = [
     fullDescription: "Do you feel like you're one prayer away from quitting? THE KNOCK reveals why most believers quit right before their miracle arrives, and more importantly, how to outlast the wait until the door finally opens. Drawing from a transformative 18-month wilderness, this book unpacks the powerful progression hidden in Matthew 7:7-8.",
     asin: "B0DW3TQZXQ",
     isbn: "979-8992849066",
-    amazonUrl: "https://a.co/d/2m87zLQ",
-    kindleUrl: "https://a.co/d/2m87zLQ",
-    paperbackUrl: "https://a.co/d/atjR1k0",
-    hardcoverUrl: "https://a.co/d/gaFpdjU",
+    amazonUrl: "",
     coverImage: "/images/books/the-knock.png",
     features: [
       "31-Day Devotional",
@@ -71,9 +84,7 @@ export const booksData: Book[] = [
     description: "You were made for more than exhaustion. This 30-day devotional speaks directly to the professional woman who has given everything to her career only to find herself depleted, disconnected, and wondering if this is all there is.",
     fullDescription: "You were made for more than exhaustion. This 30-day devotional speaks directly to the professional woman who has given everything to her career only to find herself depleted, disconnected, and wondering if this is all there is.\n\nThrough daily Scripture, practical wisdom, and guided reflection, you will move from burnout to breakthrough as you rediscover rest, release control, and renew your God-given purpose. Each day includes teaching, prayer, reflection questions, action steps, and journaling space to guide your transformation.\n\nFor the professional woman ready to move from exhaustion to sustainable purpose anchored in faith, work, and rest.",
     asin: "B0DPQXW1KY",
-    amazonUrl: "https://a.co/d/15iXD7X",
-    kindleUrl: "https://a.co/d/15iXD7X",
-    paperbackUrl: "https://a.co/d/e9WRyXd",
+    amazonUrl: "",
     coverImage: "/images/books/from-burned-out-to-breakthrough.png",
     features: [
       "30-Day Devotional Format",
@@ -99,9 +110,7 @@ export const booksData: Book[] = [
     rating: "#1,459 in Christian Faith",
     asin: "B0FWRZMY2K",
     isbn: "979-8992849073",
-    amazonUrl: "https://a.co/d/60f8DW7",
-    kindleUrl: "https://a.co/d/cdtxuIL",
-    paperbackUrl: "https://a.co/d/c4EOsqN",
+    amazonUrl: "",
     coverImage: "/images/books/the-wilderness-season.png"
   },
   {
@@ -121,10 +130,7 @@ export const booksData: Book[] = [
     rating: "New Release",
     asin: "B0FTZXKSPT",
     isbn: "979-8992849059",
-    amazonUrl: "https://a.co/d/9FEstCW",
-    kindleUrl: "https://a.co/d/3lINwO1",
-    paperbackUrl: "https://a.co/d/0xWpi6S",
-    hardcoverUrl: "https://a.co/d/hFhwgXe",
+    amazonUrl: "",
     coverImage: "/images/books/the-unknown.png"
   },
   {
@@ -142,9 +148,7 @@ export const booksData: Book[] = [
     description: "The final book of the transformative Trauma Detox Series, guiding you to a life of abundance, joy, and flourishing. Bloom challenges you to embrace your identity, rediscover your purpose, and create a life marked by growth. This book isn't just about surviving: it's about flourishing.",
     fullDescription: "The final book of the transformative Trauma Detox Series, guiding you to a life of abundance, joy, and flourishing.\n\nBloom challenges you to embrace your identity, rediscover your purpose, and create a life marked by growth. This book isn't just about surviving: it's about flourishing.\n\nAfter you've named your scars and mended what was broken, it's time to bloom—to step into the vibrant, purposeful life God always intended for you.",
     asin: "B0DXDKPKXC",
-    amazonUrl: "https://a.co/d/cQGR88E",
-    kindleUrl: "https://a.co/d/cQGR88E",
-    paperbackUrl: "https://a.co/d/9s7kOHz",
+    amazonUrl: "",
     coverImage: "/images/books/bloom.png"
   },
   {
@@ -162,9 +166,7 @@ export const booksData: Book[] = [
     description: "Healing is not just about moving forward: it's about restoring what was lost and rebuilding what was broken. Mended is your guide to navigating the path of restoration with courage and faith, helping you repair broken relationships, rebuild self-worth, and rediscover joy after trauma.",
     fullDescription: "Healing is not just about moving forward: it's about restoring what was lost and rebuilding what was broken.\n\nMended is your guide to navigating the path of restoration with courage and faith, helping you repair broken relationships, rebuild self-worth, and rediscover joy after trauma.\n\nThis is the steady, intentional work of putting the pieces back together—not as they were, but better, stronger, and anchored in God's grace.",
     asin: "B0DXDDHCG8",
-    amazonUrl: "https://a.co/d/cwY5jQx",
-    kindleUrl: "https://a.co/d/cwY5jQx",
-    paperbackUrl: "https://a.co/d/7gzS1VW",
+    amazonUrl: "",
     coverImage: "/images/books/mended.png"
   },
   {
@@ -182,9 +184,7 @@ export const booksData: Book[] = [
     description: "Life leaves scars. Some are visible, while others lie hidden deep within the heart. Scarred is the first book in the Trauma Detox Series, providing empathetic guidance and biblical truth to help you name the pain and begin the healing journey.",
     fullDescription: "Life leaves scars. Some are visible, while others lie hidden deep within the heart.\n\nScarred is the first book in the Trauma Detox Series, providing empathetic guidance and biblical truth to help you name the pain and begin the healing journey.\n\nThis book meets you where you are—in the aftermath of what broke you—and gently leads you toward the hope of healing. Your scars are not the end of your story. They are proof that you survived.",
     asin: "B0DXFQ6NDC",
-    amazonUrl: "https://a.co/d/a8xRJH4",
-    kindleUrl: "https://a.co/d/a8xRJH4",
-    paperbackUrl: "https://a.co/d/f8Rmpkh",
+    amazonUrl: "",
     coverImage: "/images/books/scarred.png"
   },
   {
@@ -203,9 +203,7 @@ export const booksData: Book[] = [
     rating: "5.0 out of 5 stars",
     asin: "B0DW1LWRKY",
     isbn: "978-0997465563",
-    amazonUrl: "https://a.co/d/1gCn0gx",
-    kindleUrl: "https://a.co/d/1gCn0gx",
-    paperbackUrl: "https://a.co/d/4btvpjl",
+    amazonUrl: "",
     coverImage: "/images/books/the-meaningful-life.png"
   },
   {
@@ -225,10 +223,7 @@ export const booksData: Book[] = [
     rating: "5.0 out of 5 stars",
     asin: "B0BV76NV8J",
     isbn: "978-0997465532",
-    amazonUrl: "https://a.co/d/hIghyNZ",
-    kindleUrl: "https://a.co/d/hIghyNZ",
-    paperbackUrl: "https://a.co/d/c2K10R0",
-    hardcoverUrl: "https://a.co/d/jeSuprD",
+    amazonUrl: "",
     coverImage: "/images/books/prayer-lifestyle.png"
   }
 ];
@@ -264,6 +259,15 @@ export const authorsData: Author[] = [
       instagram: "https://www.instagram.com/ivonvalerie",
       youtube: "https://www.youtube.com/@ivonlvalerie"
     }
+  },
+  {
+    slug: "clevin-ambo",
+    name: "Dr. Clevin Ambo",
+    title: "Founder & President, Great Truths Ministries Inc.",
+    bio: "Dr. Clevin Ambo is a preacher, teacher, and global ministry leader whose work has touched lives across the Caribbean, Africa, and beyond. His legacy of compassion continues through feeding programs, scholarships, and the weekly broadcast of Great Truths Of The Bible Radio, which he founded in 1996.",
+    fullBio: "Dr. Clevin Ambo is a preacher, teacher, and global ministry leader whose work has touched lives across the Caribbean, Africa, and beyond. His legacy of compassion continues through feeding programs, scholarships, and the weekly broadcast of Great Truths Of The Bible Radio, which he founded in 1996. As Founder and President of Great Truths Ministries Inc., Great Truths Of The Bible Ministries, and JoshCleb Generation Ministry International, Dr. Ambo is committed to raising believers who are rooted in truth, grounded in character, and prepared to possess the promises of God. He holds a doctoral degree in divinity and Christian humanities. Dr. Ambo and his wife, Donna, reside in the United States with their family.",
+    booksCount: 1,
+    photo: "/images/clevin-ambo.png"
   },
   {
     slug: "marcus-raymond",

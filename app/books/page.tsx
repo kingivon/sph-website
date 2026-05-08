@@ -14,6 +14,7 @@ export default function BooksPage() {
         if (selectedAuthor === "ivon") return book.authorSlug === "ivon-valerie";
         if (selectedAuthor === "marcus") return book.authorSlug === "marcus-raymond";
         if (selectedAuthor === "marcia") return book.authorSlug === "marcia-thompson";
+        if (selectedAuthor === "clevin") return book.authorSlug === "clevin-ambo";
         return false;
       });
 
@@ -41,7 +42,7 @@ export default function BooksPage() {
                   : "bg-white text-charcoal hover:bg-gray-100"
               }`}
             >
-              All Books (9)
+              All Books (10)
             </button>
             <button
               onClick={() => setSelectedAuthor("ivon")}
@@ -72,6 +73,16 @@ export default function BooksPage() {
               }`}
             >
               Marcia J. Thompson (1)
+            </button>
+            <button
+              onClick={() => setSelectedAuthor("clevin")}
+              className={`px-6 py-2 rounded-lg font-medium transition-colors ${
+                selectedAuthor === "clevin"
+                  ? "bg-primary text-white"
+                  : "bg-white text-charcoal hover:bg-gray-100"
+              }`}
+            >
+              Dr. Clevin Ambo (1)
             </button>
           </div>
         </div>
@@ -146,17 +157,12 @@ export default function BooksPage() {
                   )}
 
                   <div className="flex gap-2">
-                    <Link href={`/books/${book.slug}`} className="flex-1 btn-secondary text-center">
+                    <Link href={`/books/${book.slug}`} className="flex-1 btn-primary text-center">
                       View Details
                     </Link>
-                    <a
-                      href={book.amazonUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 btn-primary text-center"
-                    >
-                      {book.status === "Pre-Order" ? "Pre-Order" : "Buy on Amazon"}
-                    </a>
+                  </div>
+                  <div className="text-center text-sm text-gray-600 mt-3">
+                    Coming Soon to Retailers
                   </div>
                 </div>
               </div>
